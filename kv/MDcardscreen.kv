@@ -1,0 +1,47 @@
+<MDCardScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        ScrollView:
+            bar_width: 0
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: dp(40)
+                spacing: dp(40)
+                adaptive_height: True
+
+                MDCard:
+                    orientation: 'vertical'
+                    pos_hint: {'center_x': .5}
+                    padding: dp(8)
+                    spacing: dp(6)
+                    size_hint: None, None
+                    size: 200, 200
+                    MDLabel:
+                        text: "Title"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
+                    MDSeparator:
+                        height: "1dp"
+
+                    Image:
+                        source: r'kivymd/images/kivymd_512.png'
+                        size_hint_y: None
+                        height: 100
+
+                    MDLabel:
+                        text: "Body"
+
+                MDSeparator:
+                    height: '1dp'
+
+                Widget:
+                    size_hint_y: None
+                    height: 30

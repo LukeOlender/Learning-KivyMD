@@ -1,0 +1,61 @@
+<MDChipsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        ScrollView:
+            bar_width: 0
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                spacing: dp(40)
+                padding: dp(40)
+
+                MDChip:
+                    pos_hint: {'center_x': .5}
+                    label: 'Hello World'
+                    text_color: (1,1,1,1)
+                    icon: 'account'
+                    callback: app.toast
+
+                MDChip:
+                    pos_hint: {'center_x': .5}
+                    label: 'Hello World'
+                    text_color: (1,1,1,1)
+                    icon: 'chip'
+                    callback: app.toast
+                    color: (1,0,0,1)
+                    check: True
+
+                MDSeparator:
+                    height: '1dp'
+
+                MDChooseChip:
+                    MDChip:
+                        label: 'This one'
+                        text_color: (1,1,1,1)
+                        icon: 'facebook'
+                        selected_chip_color: app.theme_cls.accent_color
+                    MDChip:
+                        label: 'That one'
+                        text_color: (1,1,1,1)
+                        icon: 'earth'
+                        selected_chip_color: app.theme_cls.accent_color
+                    MDChip:
+                        label: 'These ones'
+                        text_color: (1,1,1,1)
+                        icon: 'instagram'
+                        selected_chip_color: app.theme_cls.accent_color
+                    MDChip:
+                        label: 'Maybe these ones'
+                        text_color: (1,1,1,1)
+                        icon: 'home'
+                        selected_chip_color: app.theme_cls.accent_color
+                    Widget:
+                        size_hint_y: None
+                        height: 30

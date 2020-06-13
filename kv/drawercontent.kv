@@ -1,0 +1,143 @@
+<DrawerContent>:
+    orientation: 'vertical'
+    padding: '8dp'
+    spacing: '8dp'
+
+    AnchorLayout:
+        anchor_x: "left"
+        size_hint_y: None
+        height: avatar.height
+
+        Image:
+            id: avatar
+            size_hint: None, None
+            size: '56dp', '56dp'
+            source: r'kivymd/images/kivymd_logo.png'
+
+    MDLabel:
+        text: "A Test Application"
+        font_style: "Button"
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    MDLabel:
+        text: "luke.olender@gmail.com"
+        font_style: "Caption"
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    ScrollView:
+        MDList:
+            OneLineIconListItem:
+                text: 'MDBottomNavigation'
+                on_release:
+                    app.on_bottom_navigation()
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_bottom_navigation_screen')
+                IconLeftWidget:
+                    icon: 'navigation'
+
+            OneLineIconListItem:
+                text: 'MDBottomSheet'
+                on_release:
+                    app.on_bottom_navigation()
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_bottom_sheet_screen')
+                IconLeftWidget:
+                    icon: 'share-variant'
+
+            OneLineIconListItem:
+                text: 'MDButtons'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_buttons_screen')
+                IconLeftWidget:
+                    icon: 'gesture-tap-button'
+
+            OneLineIconListItem:
+                text: 'MDCards'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_card_screen')
+                IconLeftWidget:
+                    icon: 'card-text-outline'
+
+            OneLineIconListItem:
+                text: 'MDCardSwipe'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_card_swipe_screen')
+                IconLeftWidget:
+                    icon: 'card-text'
+
+            OneLineIconListItem:
+                text: 'MDChips'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_chips_screen')
+                IconLeftWidget:
+                    icon: 'chip'
+
+            OneLineIconListItem:
+                text: 'MDDialogs'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_dialogs_screen')
+                IconLeftWidget:
+                    icon: 'rectangle-outline'
+
+            OneLineIconListItem:
+                text: 'MDExpansionPanel'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_expansion_panel_screen')
+                IconLeftWidget:
+                    icon: 'arrow-down'
+
+            OneLineIconListItem:
+                text: 'MDMenus'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_menu_screen')
+                IconLeftWidget:
+                    icon: 'menu'
+
+            OneLineIconListItem:
+                text: 'MDPickers'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_pickers_screen')
+                IconLeftWidget:
+                    icon: 'clock-outline'
+
+            OneLineIconListItem:
+                text: 'MDSwitches'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_switches_screen')
+                IconLeftWidget:
+                    icon: 'toggle-switch'
+
+            OneLineIconListItem:
+                text: 'MDTextFields'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_textfields_screen')
+                IconLeftWidget:
+                    icon: 'signature-text'
+
+            OneLineIconListItem:
+                text: 'MDToast'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_toast_screen')
+                IconLeftWidget:
+                    icon: 'toaster-oven'
+
+
+    MDLabel:
+        text: u'\u00A9 Copyright of a Programmer'
+        font_style: 'Caption'
+        halign: 'right'
+        size_hint_y: None
+        height: self.texture_size[1]

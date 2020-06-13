@@ -1,0 +1,32 @@
+Useful Stuff
+
+C - Bottom Navigation (For switching screen like a lot of apps do)
+C - Buttons
+C - Cards
+C - CardSwipes
+C - Chips
+C - Dialogs
+C - ExpansionPanels
+C - Menus
+C - Pickers
+C - Switches
+C - TextFields
+C - Toasts
+Bottom Sheet (e.g. share on social media)
+Progress Bar (Loading Bar)
+Progress Loader (Loading Animation while Up/Downloading Files)
+Slider (Volume)
+SnackBar (Like a Toast but more for errors and stuff)
+Spinner (Loading Animation)
+Tabs (Tabs Below Toolbar)
+Tooltip (Hint Text For Buttons)
+TapTargetView (Circle that surrounds a (floating action) button)
+
+Optionals (Probably not going to use often, so not necessary for demo app)
+
+Context Menu (No idea)
+File Manager (A File Manager system)
+DataTables (Tables but doesnt work so well yet)
+Backdrop (Screen Falls Down and reveals image) 
+Banner (Like a list item, unnecessary for now)
+User Animation Card (No Idea)

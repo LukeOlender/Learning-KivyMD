@@ -1,0 +1,36 @@
+<MDPickersScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        ScrollView:
+            bar_width: 0
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing: dp(40)
+                padding: dp(40)
+                adaptive_height: True
+
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDDatePicker'
+                    on_release:
+                        app.custom_pickers.open_date_picker()
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDTimePicker'
+                    on_release:
+                        app.custom_pickers.open_time_picker()
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDThemePicker'
+                    on_release:
+                        app.custom_pickers.open_theme_picker()
+                Widget:
+                    size_hint_y: None
+                    height: 30

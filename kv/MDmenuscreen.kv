@@ -1,0 +1,58 @@
+<CustomToolbar>:
+    size_hint_y: None
+    height: self.theme_cls.standard_increment
+    padding: "5dp"
+    spacing:
+    md_bg_color: app.theme_cls.primary_color
+
+    Widget:
+        size_hint_x: None
+        width: dp(15)
+
+    MDLabel:
+        text: "MDDropdownMenu"
+        pos_hint: {"center_y": .5}
+        size_hint_x: None
+        width: self.texture_size[0]
+        text_size: None, None
+        font_style: 'H6'
+        theme_text_color: 'Custom'
+        text_color: (1, 1, 1, 1)
+
+    Widget:
+
+    MDIconButton:
+        id: button_2
+        icon: "dots-vertical"
+        pos_hint: {"center_y": .5}
+        theme_text_color: "Custom"
+        text_color: (1, 1, 1, 1)
+        on_release:
+            app.menu_2.check_position_caller(None, None, None)
+            app.menu_2.open()
+
+<MDMenuScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        FloatLayout:
+            MDSeparator:
+                height: '1dp'
+
+            CustomToolbar:
+                id: custom_toolbar
+                elevation: 10
+                pos_hint: {"top": .9}
+
+            MDRaisedButton:
+                id: button_1
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text: 'Open menu'
+                on_release:
+                    app.menu_1.check_position_caller(None, None, None)
+                    app.menu_1.open()

@@ -1,0 +1,42 @@
+<MDTextFieldsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+
+        ScrollView:
+            bar_width: 0  # Don't show the scrollbar
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                padding: dp(48)
+                spacing: dp(50)
+
+                MDTextField:
+                    hint_text: 'MDTextField'
+                    helper_text: 'Type your email here'
+                    helper_text_mode: 'on_focus'
+                    max_text_length: 12
+                    color_mode: 'accent'
+                    icon_right: 'email'
+
+                MDTextFieldRound:
+                    hint_text: 'MDTextFieldRound'
+                    normal_color: .4, .4, .4, 1
+                    icon_right: 'lock'
+                    password: True
+
+                MDTextFieldRect:
+                    hint_text: 'MDTextFieldRect'
+                    size_hint: None, None
+                    size: Window.width - dp(60), dp(60)
+                    pos_hint: {'center_y': .5, 'center_x': .5}
+
+                Widget:
+                    size_hint_y: None
+                    height: 30

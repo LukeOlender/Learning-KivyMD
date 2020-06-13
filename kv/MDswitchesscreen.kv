@@ -1,0 +1,56 @@
+<MDSwitchesScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        ScrollView:
+            bar_width: 0
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                padding: dp(40)
+                spacing: dp(40)
+
+                MDCheckbox:
+                    pos_hint: {'center_x': .5}
+                    size_hint: None, None
+                    size: dp(48), dp(48)
+                MDCheckbox:
+                    pos_hint: {'center_x': .5}
+                    size_hint: None, None
+                    size: dp(48), dp(48)
+                    active: True
+                    on_active:
+                        toast('Checked') if self.active else toast('Unchecked')
+                MDSwitch:
+                    pos_hint: {'center_x': .5}
+                MDSwitch:
+                    pos_hint: {'center_x': .5}
+                    active: True
+                    on_active:
+                        toast('Checked') if self.active else toast('Unchecked')
+
+                FloatLayout:
+                    MDCheckbox:
+                        pos_hint: {'center_x': .4}
+                        group: 'group'
+                        size_hint: None, None
+                        size: dp(48), dp(48)
+                    MDCheckbox:
+                        pos_hint: {'center_x': .5}
+                        group: 'group'
+                        size_hint: None, None
+                        size: dp(48), dp(48)
+                        active: True
+                    MDCheckbox:
+                        pos_hint: {'center_x': .6}
+                        group: 'group'
+                        size_hint: None, None
+                        size: dp(48), dp(48)
+                    Widget:
+                        size_hint_y: None
+                        height: 30

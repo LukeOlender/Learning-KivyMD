@@ -1,0 +1,44 @@
+<MDDialogsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        ScrollView:
+            bar_width: 0
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                spacing: dp(40)
+                padding: dp(40)
+
+                MDRectangleFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'Open alert dialog'
+                    on_release:
+                        app.custom_dialogs.open_alert_dialog()
+
+                MDRectangleFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'Open simple dialog'
+                    on_release:
+                        app.custom_dialogs.open_simple_dialog()
+
+                MDRectangleFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'Open confirmation dialog'
+                    on_release:
+                        app.custom_dialogs.open_confirmation_dialog()
+
+                MDRectangleFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'Open confirmation dialog'
+                    on_release:
+                        app.custom_dialogs.open_custom_dialog()
+                Widget:
+                    size_hint_y: None
+                    height: 30

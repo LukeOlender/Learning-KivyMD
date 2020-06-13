@@ -1,0 +1,39 @@
+<MDBottomNavigationScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDBottomNavigation:
+            id: bottom_navigation
+            # This is a fancy screenmanager
+            MDBottomNavigationItem:
+                # This is a fancy screen
+                text: 'Python'
+                name: 'screen1'
+                icon: 'language-python'
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    text: 'Python!'
+                    md_bg_color: app.theme_cls.primary_color
+            MDBottomNavigationItem:
+                # This is a fancy screen
+                text: 'Earth'
+                name: 'screen2'
+                icon: 'earth'
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    text: 'Earth'
+                    md_bg_color: app.theme_cls.accent_color
+            MDBottomNavigationItem:
+                # This is a fancy screen
+                text: 'Dog'
+                name: 'screen3'
+                icon: 'dog-service'
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    text: 'Dog!'
+                    md_bg_color: (1, 0, 0, 1)

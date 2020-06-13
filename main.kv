@@ -1,0 +1,81 @@
+#:import toast kivymd.toast.toast
+
+#:include kv/drawercontent.kv
+
+#:include kv/MDtextfieldsscreen.kv
+#:include kv/MDbuttonsscreen.kv
+#:include kv/MDtoastscreen.kv
+#:include kv/MDdialogsscreen.kv
+#:include kv/MDchipsscreen.kv
+#:include kv/MDpickersscreen.kv
+#:include kv/MDswitchesscreen.kv
+#:include kv/MDmenuscreen.kv
+#:include kv/MDcardscreen.kv
+#:include kv/MDcardswipescreen.kv
+#:include kv/MDexpansionpanelscreen.kv
+#:include kv/MDbottomnavigationscreen.kv
+#:include kv/MDbottomsheetscreen.kv
+
+NavigationLayout:
+    ScreenManager:
+        id: screen_manager
+
+        MDTextFieldsScreen:
+            name: 'MD_textfields_screen'
+            id: MD_textfields_screen
+
+        MDButtonsScreen:
+            name: 'MD_buttons_screen'
+            id: MD_buttons_screen
+
+        MDToastScreen:
+            name: 'MD_toast_screen'
+            id: MD_toast_screen
+
+        MDDialogsScreen:
+            name: 'MD_dialogs_screen'
+            id: MD_dialogs_screen
+
+        MDChipsScreen:
+            name: 'MD_chips_screen'
+            id: MD_chips_screen
+
+        MDPickersScreen:
+            name: 'MD_pickers_screen'
+            id: MD_pickers_screen
+
+        MDSwitchesScreen:
+            name: 'MD_switches_screen'
+            id: MD_switches_screen
+
+        MDMenuScreen:
+            name: 'MD_menu_screen'
+            id: MD_menu_screen
+
+        MDCardScreen:
+            name: 'MD_card_screen'
+            id: MD_card_screen
+
+        MDCardSwipeScreen:
+            name: 'MD_card_swipe_screen'
+            id: MD_card_swipe_screen
+
+        MDExpansionPanelScreen:
+            name: 'MD_expansion_panel_screen'
+            id: MD_expansion_panel_screen
+
+        MDBottomNavigationScreen:
+            name: 'MD_bottom_navigation_screen'
+            id: MD_bottom_navigation_screen
+
+        MDBottomSheetScreen:
+            name: 'MD_bottom_sheet_screen'
+            id: MD_bottom_sheet_screen
+
+    MDNavigationDrawer:
+        id: nav_drawer
+        swipe_distance: dp(200)
+
+        DrawerContent:
+            screen_manager: screen_manager
+            nav_drawer: nav_drawer

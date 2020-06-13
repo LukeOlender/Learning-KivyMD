@@ -1,0 +1,94 @@
+<MDButtonsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        ScrollView:
+            bar_width: 0  # Don't show the scrollbar
+
+            MDBoxLayout:
+                adaptive_height: True
+                padding: dp(40)
+                spacing: dp(10)
+                orientation: 'vertical'
+
+                MDIconButton:
+                    pos_hint: {'center_x': .5}
+                    icon: 'lock'
+                    theme_text_color: 'Custom'
+                    text_color: 1,0,0,1
+
+                MDFloatingActionButton:
+                    pos_hint: {'center_x': .5}
+                    icon: 'lock-outline'
+
+                MDFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDFlatButton'
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.accent_color
+
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDRaisedButton'
+                    theme_text_color: 'Custom'
+                    text_color: (1,1,1,1)
+                    md_bg_color: app.theme_cls.accent_color
+
+                MDRectangleFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDRectangleFlatButton'
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.accent_color
+
+                MDRectangleFlatIconButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDRectangleFlatIconButton'
+                    icon: 'party-popper'
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.accent_color
+                    width: dp(240)
+
+                MDRoundFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDRoundFlatButton'
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.accent_color
+
+                MDRoundFlatIconButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDRoundFlatIconButton'
+                    icon: 'party-popper'
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.accent_color
+                    width: dp(240)
+
+                MDFillRoundFlatButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDFillRoundFlatButton'
+                    theme_text_color: 'Custom'
+                    text_color: (1, 1, 1, 1)
+                    md_bg_color: app.theme_cls.accent_color
+
+                MDFillRoundFlatIconButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDFillRoundFlatIconButton'
+                    icon: 'party-popper'
+                    theme_text_color: 'Custom'
+                    text_color: (1, 1, 1, 1)
+                    md_bg_color: app.theme_cls.accent_color
+                    width: dp(240)
+
+                MDTextButton:
+                    pos_hint: {'center_x': .5}
+                    text: 'MDTextButton'
+                    theme_text_color: 'Custom'
+                    text_color: app.theme_cls.accent_color
+
+                Widget:
+                    size_hint_y: None
+                    height: 30

@@ -1,0 +1,18 @@
+
+
+<MDToastScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        FloatLayout:
+
+            MDRectangleFlatButton:
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                text: 'Show Toast'
+                on_release:
+                    toast('This is a toast')
