@@ -9,9 +9,14 @@ from kivymd.uix.behaviors import RectangularElevationBehavior
 from kivymd.uix.card import MDCardSwipe
 from kivy.lang import Builder
 from kivymd.uix.expansionpanel import MDExpansionPanel, MDExpansionPanelThreeLine
+from kivymd.uix.bottomsheet import MDGridBottomSheet
 
 from custompy.customdialogs import CustomDialogs
 from custompy.custompickers import CustomPickers
+
+
+class StarterScreen(MDScreen):
+    pass
 
 
 class MDTextFieldsScreen(MDScreen):
@@ -129,22 +134,44 @@ class MainDemoApp(MDApp):
 
         # Update the current toolbar
         current_screen = self.root.ids.screen_manager.current
-        self.root.ids[current_screen].ids.toolbar.left_action_items = [
+        toolbar = self.root.ids[current_screen].ids.toolbar
+        toolbar.left_action_items = [
             ['menu', lambda x: self.root.ids.nav_drawer.set_state('toggle')]]
+
         
 
-    def change_screen(self, screen_name):
+    def change_screen(self, screen_name, text):
         screen_manager = self.root.ids.screen_manager
         screen_manager.current = screen_name
         # Update the current active toolbar
-        self.root.ids[screen_name].ids.toolbar.left_action_items = [
+        toolbar = self.root.ids[screen_name].ids.toolbar
+        toolbar.left_action_items = [
             ['menu', lambda x: self.root.ids.nav_drawer.set_state('toggle')]]
+        toolbar.title = text
 
     def toast(self, instance, value):
         toast(value)
 
     def remove_item(self, instance):
         self.root.ids.MD_card_swipe_screen.ids.MD_card_swipe_demo.remove_widget(instance)
+
+    def show_share_bottom_sheet(self):
+        share_sheet = MDGridBottomSheet(radius_from='top_left')
+        data = {
+            "Facebook": "facebook-box",
+            "YouTube": "youtube",
+            "Twitter": "twitter-box",
+            "iCloud": "cloud-upload",
+            "WhatsApp": "whatsapp",
+        }
+        for item in data.items():
+            share_sheet.add_item(
+                text=item[0],
+                callback=lambda x, y=item[0]: self.toast(x, y),
+                icon_src=item[1]
+            )
+
+        share_sheet.open()
 
 
 if __name__ == '__main__':

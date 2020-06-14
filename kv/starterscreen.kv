@@ -1,0 +1,18 @@
+<StarterScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'KivyMD Demo App'
+
+        MDFloatLayout:
+            MDLabel:
+                text: 'Welcome to the unofficial demo app for KivyMD! \n Click the menu on the top left and pick a screen.'
+                halign: 'center'
+                font_style: 'H5'
+                theme_text_color: 'Secondary'
+                size_hint_x: .8
+                pos_hint: {'center_x': .5}

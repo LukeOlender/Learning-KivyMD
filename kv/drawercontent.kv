@@ -15,7 +15,7 @@
             source: r'kivymd/images/kivymd_logo.png'
 
     MDLabel:
-        text: "A Test Application"
+        text: "The KivyMD demo app"
         font_style: "Button"
         size_hint_y: None
         height: self.texture_size[1]
@@ -33,7 +33,7 @@
                 on_release:
                     app.on_bottom_navigation()
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_bottom_navigation_screen')
+                    app.change_screen('MD_bottom_navigation_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'navigation'
 
@@ -42,7 +42,7 @@
                 on_release:
                     app.on_bottom_navigation()
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_bottom_sheet_screen')
+                    app.change_screen('MD_bottom_sheet_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'share-variant'
 
@@ -50,7 +50,7 @@
                 text: 'MDButtons'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_buttons_screen')
+                    app.change_screen('MD_buttons_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'gesture-tap-button'
 
@@ -58,7 +58,7 @@
                 text: 'MDCards'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_card_screen')
+                    app.change_screen('MD_card_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'card-text-outline'
 
@@ -66,7 +66,7 @@
                 text: 'MDCardSwipe'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_card_swipe_screen')
+                    app.change_screen('MD_card_swipe_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'card-text'
 
@@ -74,7 +74,7 @@
                 text: 'MDChips'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_chips_screen')
+                    app.change_screen('MD_chips_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'chip'
 
@@ -82,7 +82,7 @@
                 text: 'MDDialogs'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_dialogs_screen')
+                    app.change_screen('MD_dialogs_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'rectangle-outline'
 
@@ -90,7 +90,7 @@
                 text: 'MDExpansionPanel'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_expansion_panel_screen')
+                    app.change_screen('MD_expansion_panel_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'arrow-down'
 
@@ -98,7 +98,7 @@
                 text: 'MDMenus'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_menu_screen')
+                    app.change_screen('MD_menu_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'menu'
 
@@ -106,7 +106,7 @@
                 text: 'MDPickers'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_pickers_screen')
+                    app.change_screen('MD_pickers_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'clock-outline'
 
@@ -114,7 +114,7 @@
                 text: 'MDSwitches'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_switches_screen')
+                    app.change_screen('MD_switches_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'toggle-switch'
 
@@ -122,7 +122,7 @@
                 text: 'MDTextFields'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_textfields_screen')
+                    app.change_screen('MD_textfields_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'signature-text'
 
@@ -130,7 +130,7 @@
                 text: 'MDToast'
                 on_release:
                     root.nav_drawer.set_state('close')
-                    app.change_screen('MD_toast_screen')
+                    app.change_screen('MD_toast_screen', text=self.text)
                 IconLeftWidget:
                     icon: 'toaster-oven'
 

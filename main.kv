@@ -15,10 +15,15 @@
 #:include kv/MDexpansionpanelscreen.kv
 #:include kv/MDbottomnavigationscreen.kv
 #:include kv/MDbottomsheetscreen.kv
+#:include kv/starterscreen.kv
 
 NavigationLayout:
     ScreenManager:
         id: screen_manager
+
+        StarterScreen:
+            name: 'starter_screen'
+            id: starter_screen
 
         MDTextFieldsScreen:
             name: 'MD_textfields_screen'
