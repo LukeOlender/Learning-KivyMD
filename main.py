@@ -1,3 +1,5 @@
+import kivy
+
 from kivymd.app import MDApp
 from kivymd.toast import toast
 from kivymd.uix.menu import MDDropdownMenu
@@ -113,7 +115,7 @@ class MainDemoApp(MDApp):
         # Set up the menus for the menu screen
         menu_items = [{"icon": "git", "text": f"Item {i}"} for i in range(5)]
         self.menu_1 = MDDropdownMenu(
-            caller=self.root.ids.MD_menu_screen.ids.button_1, items=menu_items, width_mult=4)
+            caller=self.root.ids.MD_menu_screen.ids.button_1, items=menu_items, width_mult=4, position='center')
         self.menu_2 = MDDropdownMenu(
             caller=self.root.ids.MD_menu_screen.ids.custom_toolbar.ids.button_2, items=menu_items, width_mult=4)
 

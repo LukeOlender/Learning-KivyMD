@@ -30,7 +30,7 @@ class CustomDialogs(MDDialog):
         d = MDDialog(type='custom', content_cls=CustomDialogContent(), buttons=[
                      MDFlatButton(text='CANCEL', on_release=lambda *args: d.dismiss()),
                      MDFlatButton(text='OK', on_release=lambda *args: d.dismiss())],
-                     size_hint=(.8, .5), auto_dismiss=False)
+                     size_hint_x=.7, auto_dismiss=False)
         d.open()
 
 
