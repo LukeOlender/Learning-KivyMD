@@ -111,6 +111,14 @@
                     icon: 'clock-outline'
 
             OneLineIconListItem:
+                text: 'MDProgressbar'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_progress_bar_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'progress-clock'
+
+            OneLineIconListItem:
                 text: 'MDSwitches'
                 on_release:
                     root.nav_drawer.set_state('close')

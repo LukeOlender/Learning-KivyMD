@@ -1,5 +1,3 @@
-import kivy
-
 from kivymd.app import MDApp
 from kivymd.toast import toast
 from kivymd.uix.menu import MDDropdownMenu
@@ -12,6 +10,7 @@ from kivymd.uix.card import MDCardSwipe
 from kivy.lang import Builder
 from kivymd.uix.expansionpanel import MDExpansionPanel, MDExpansionPanelThreeLine
 from kivymd.uix.bottomsheet import MDGridBottomSheet
+from kivy.clock import Clock
 
 from custompy.customdialogs import CustomDialogs
 from custompy.custompickers import CustomPickers
@@ -70,6 +69,10 @@ class MDBottomNavigationScreen(MDScreen):
 
 
 class MDBottomSheetScreen(MDScreen):
+    pass
+
+
+class MDProgressBarScreen(MDScreen):
     pass
 
 
@@ -174,6 +177,21 @@ class MainDemoApp(MDApp):
             )
 
         share_sheet.open()
+
+    def animate_progressbar(self):
+        self.root.ids.MD_progress_bar_screen.ids.progressbar.value = 0
+        try:
+            self.progress.cancel()
+        except AttributeError:
+            pass
+
+        def update(interval):
+            pb = self.root.ids.MD_progress_bar_screen.ids.progressbar.value
+            if pb == 100:
+                return False
+            self.root.ids.MD_progress_bar_screen.ids.progressbar.value += .5
+
+        self.progress = Clock.schedule_interval(update, 0)
 
 
 if __name__ == '__main__':

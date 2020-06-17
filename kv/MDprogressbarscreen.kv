@@ -1,0 +1,23 @@
+<MDProgressBarScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDFloatLayout:
+
+            MDRaisedButton:
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                text: 'Animate progress'
+                on_release:
+                    app.animate_progressbar()
+
+            MDProgressBar:
+                id: progressbar
+                size_hint_x: .8
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                value: 0
+                max: 100
