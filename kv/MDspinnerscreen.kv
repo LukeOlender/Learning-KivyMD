@@ -1,0 +1,22 @@
+<MDSpinnerScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDFloatLayout:
+            MDRaisedButton:
+                text: 'Download'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                on_release:
+                    app.show_spinner()
+
+            MDSpinner:
+                id: spinner
+                size_hint: None, None
+                size: dp(46), dp(46)
+                pos_hint: {'center_x': .5, 'center_y': .3}
+                active: False

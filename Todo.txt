@@ -12,10 +12,9 @@ C - Pickers
 C - Switches
 C - TextFields
 C - Toasts
-Bottom Sheet (e.g. share on social media)
-Progress Bar (Loading Bar)
-Progress Loader (Loading Animation while Up/Downloading Files)
-Slider (Volume)
+C - Bottom Sheet (e.g. share on social media)
+C - Progress Bar (Loading Bar)
+C - Slider (Volume)
 SnackBar (Like a Toast but more for errors and stuff)
 Spinner (Loading Animation)
 Tabs (Tabs Below Toolbar)
@@ -24,6 +23,7 @@ TapTargetView (Circle that surrounds a (floating action) button)
 
 Optionals (Probably not going to use often, so not necessary for demo app)
 
+Progress Loader (Loading Animation while Up/Downloading Files)
 Context Menu (No idea)
 File Manager (A File Manager system)
 DataTables (Tables but doesnt work so well yet)

@@ -16,6 +16,8 @@
 #:include kv/MDbottomnavigationscreen.kv
 #:include kv/MDbottomsheetscreen.kv
 #:include kv/MDprogressbarscreen.kv
+#:include kv/MDsliderscreen.kv
+#:include kv/MDspinnerscreen.kv
 #:include kv/starterscreen.kv
 
 NavigationLayout:
@@ -81,6 +83,14 @@ NavigationLayout:
         MDProgressBarScreen:
             name: 'MD_progress_bar_screen'
             id: MD_progress_bar_screen
+
+        MDSliderScreen:
+            name: 'MD_slider_screen'
+            id: MD_slider_screen
+
+        MDSpinnerScreen:
+            name: 'MD_spinner_screen'
+            id: MD_spinner_screen
 
     MDNavigationDrawer:
         id: nav_drawer

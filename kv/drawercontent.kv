@@ -119,6 +119,22 @@
                     icon: 'progress-clock'
 
             OneLineIconListItem:
+                text: 'MDSlider'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_slider_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'volume-high'
+
+            OneLineIconListItem:
+                text: 'MDSpinner'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_spinner_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'reload'
+
+            OneLineIconListItem:
                 text: 'MDSwitches'
                 on_release:
                     root.nav_drawer.set_state('close')

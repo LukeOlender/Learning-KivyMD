@@ -1,0 +1,29 @@
+<MDSliderScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDGridLayout:
+            rows: 1
+            padding: dp(15)
+
+            MDIcon:
+                icon: 'volume-low'
+                size_hint_x: .1
+                halign: 'center'
+
+            MDSlider:
+                min: 0
+                max: 100
+                value: 50
+
+            MDIcon:
+                icon: 'volume-high'
+                size_hint_x: .1
+                halign: 'center'
+

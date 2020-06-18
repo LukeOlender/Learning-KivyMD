@@ -76,6 +76,14 @@ class MDProgressBarScreen(MDScreen):
     pass
 
 
+class MDSliderScreen(MDScreen):
+    pass
+
+
+class MDSpinnerScreen(MDScreen):
+    pass
+
+
 class SwipeToDeleteItem(MDCardSwipe):
     """Card with `swipe-to-delete` behavior."""
 
@@ -179,19 +187,39 @@ class MainDemoApp(MDApp):
         share_sheet.open()
 
     def animate_progressbar(self):
-        self.root.ids.MD_progress_bar_screen.ids.progressbar.value = 0
+
+        def set_progress_back(*args):
+            # Sets bar back to 0
+            self.root.ids.MD_progress_bar_screen.ids.progressbar.value = 0
+
+        def update(*args):
+            # Update bar by one 150th until 100
+            pb = self.root.ids.MD_progress_bar_screen.ids.progressbar.value
+            if pb >= 100:
+                Clock.schedule_once(set_progress_back, 1)
+                return False
+            self.root.ids.MD_progress_bar_screen.ids.progressbar.value += 100/150
+
+        set_progress_back()
+
+
+
+        self.progress = Clock.schedule_interval(update, 0)
+
+    def show_spinner(self):
+
+        def spinner_done(interval):
+            self.root.ids.MD_spinner_screen.ids.spinner.active = False
+            toast('Done!')
+
+        self.root.ids.MD_spinner_screen.ids.spinner.active = True
+
         try:
-            self.progress.cancel()
+            self.spinner.cancel()
         except AttributeError:
             pass
 
-        def update(interval):
-            pb = self.root.ids.MD_progress_bar_screen.ids.progressbar.value
-            if pb == 100:
-                return False
-            self.root.ids.MD_progress_bar_screen.ids.progressbar.value += .5
-
-        self.progress = Clock.schedule_interval(update, 0)
+        self.spinner = Clock.schedule_once(spinner_done, 3)
 
 
 if __name__ == '__main__':
