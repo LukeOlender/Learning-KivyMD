@@ -202,7 +202,10 @@ class MainDemoApp(MDApp):
 
         set_progress_back()
 
-
+        try:
+            self.progress.cancel()
+        except AttributeError:
+            pass
 
         self.progress = Clock.schedule_interval(update, 0)
 
