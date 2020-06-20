@@ -94,6 +94,9 @@ NavigationLayout:
 
     MDNavigationDrawer:
         id: nav_drawer
+        pos_hint: {'top': 1}
+        size_hint_y: None
+        height: root.height - dp(50)
 
         DrawerContent:
             screen_manager: screen_manager
