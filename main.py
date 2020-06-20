@@ -11,6 +11,8 @@ from kivy.lang import Builder
 from kivymd.uix.expansionpanel import MDExpansionPanel, MDExpansionPanelThreeLine
 from kivymd.uix.bottomsheet import MDGridBottomSheet
 from kivy.clock import Clock
+from kivy.utils import platform
+
 
 from custompy.customdialogs import CustomDialogs
 from custompy.custompickers import CustomPickers
@@ -150,6 +152,19 @@ class MainDemoApp(MDApp):
         toolbar = self.root.ids[current_screen].ids.toolbar
         toolbar.left_action_items = [
             ['menu', lambda x: self.root.ids.nav_drawer.set_state('toggle')]]
+
+        # If on ios, do this to display the ad banner
+        if platform == 'ios':
+            from pyobjus import autoclass
+            self.banner_ad = autoclass('adSwitch').alloc().init()
+
+    def show_banner(self):
+        # Show ads
+        self.banner_ad.show_ads()
+
+    def hide_banner(self):
+        # Hide ads
+        self.banner_ad.hide_ads()
 
     def change_screen(self, screen_name, text):
         screen_manager = self.root.ids.screen_manager
