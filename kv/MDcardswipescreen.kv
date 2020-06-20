@@ -24,6 +24,7 @@
 <MDCardSwipeScreen>:
     MDBoxLayout:
         orientation: 'vertical'
+
         MDToolbar:
             pos_hint: {'top': 1}
             id: toolbar
@@ -32,14 +33,12 @@
 
         MDBoxLayout:
             orientation: "vertical"
-            padding: dp(40), 0
             pos_hint: {'center_x': .5}
 
             ScrollView:
-
                 MDList:
                     id: MD_card_swipe_demo
 
-            Widget:
-                size_hint_y: None
-                height: 30
+        Widget:
+            size_hint_y: None
+            height: dp(55)

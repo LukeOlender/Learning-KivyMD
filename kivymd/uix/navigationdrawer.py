@@ -594,21 +594,25 @@ class MDNavigationDrawer(MDCard):
         return True
 
     def on_touch_move(self, touch):
-        if self.status == "closed":
-            if (
-                self.get_dist_from_side(touch.ox) <= self.swipe_edge_width
-                and abs(touch.x - touch.ox) > self.swipe_distance
-            ):
-                self.status = "opening_with_swipe"
-        elif self.status == "opened":
-            self.status = "closing_with_swipe"
+        pass
+        # I don't want the nav drawer in my app to be swiped opened or closed, so i just disabled
+        #     this function
 
-        if self.status in ("opening_with_swipe", "closing_with_swipe"):
-            self.open_progress = max(
-                min(self.open_progress + touch.dx / self.width, 1), 0
-            )
-            return True
-        return super().on_touch_move(touch)
+        # if self.status == "closed":
+        #     if (
+        #         self.get_dist_from_side(touch.ox) <= self.swipe_edge_width
+        #         and abs(touch.x - touch.ox) > self.swipe_distance
+        #     ):
+        #         self.status = "opening_with_swipe"
+        # elif self.status == "opened":
+        #     self.status = "closing_with_swipe"
+        #
+        # if self.status in ("opening_with_swipe", "closing_with_swipe"):
+        #     self.open_progress = max(
+        #         min(self.open_progress + touch.dx / self.width, 1), 0
+        #     )
+        #     return True
+        # return super().on_touch_move(touch)
 
     def on_touch_up(self, touch):
         if self.status == "opening_with_swipe":

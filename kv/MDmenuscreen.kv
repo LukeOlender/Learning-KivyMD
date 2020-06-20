@@ -5,9 +5,13 @@
     spacing:
     md_bg_color: app.theme_cls.primary_color
 
-    Widget:
-        size_hint_x: None
-        width: dp(15)
+    MDIconButton:
+        icon: 'menu'
+        pos_hint: {"center_y": .5}
+        theme_text_color: "Custom"
+        text_color: (1, 1, 1, 1)
+        on_release:
+            app.root.ids.nav_drawer.set_state('toggle')
 
     MDLabel:
         text: "MDDropdownMenu"
@@ -34,20 +38,16 @@
 <MDMenuScreen>:
     MDBoxLayout:
         orientation: 'vertical'
-        MDToolbar:
+
+        CustomToolbar:
+            id: custom_toolbar
             pos_hint: {'top': 1}
-            id: toolbar
             elevation: 10
             title: 'Navigation Drawer'
 
         FloatLayout:
             MDSeparator:
                 height: '1dp'
-
-            CustomToolbar:
-                id: custom_toolbar
-                elevation: 10
-                pos_hint: {"top": .9}
 
             MDRaisedButton:
                 id: button_1

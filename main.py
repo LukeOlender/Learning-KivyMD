@@ -151,11 +151,13 @@ class MainDemoApp(MDApp):
         toolbar.left_action_items = [
             ['menu', lambda x: self.root.ids.nav_drawer.set_state('toggle')]]
 
-        
-
     def change_screen(self, screen_name, text):
         screen_manager = self.root.ids.screen_manager
         screen_manager.current = screen_name
+        if screen_name != 'MD_menu_screen':
+            self.update_toolbar(screen_name, text)
+
+    def update_toolbar(self, screen_name, text):
         # Update the current active toolbar
         toolbar = self.root.ids[screen_name].ids.toolbar
         toolbar.left_action_items = [
@@ -164,12 +166,15 @@ class MainDemoApp(MDApp):
 
     def toast(self, instance, value):
         toast(value)
+        print('Maybe hide ad banner')
 
     def remove_item(self, instance):
         self.root.ids.MD_card_swipe_screen.ids.MD_card_swipe_demo.remove_widget(instance)
 
     def show_share_bottom_sheet(self):
         share_sheet = MDGridBottomSheet(radius_from='top_left')
+        share_sheet.bind(on_dismiss=lambda *args: print('Hide banner ad'),
+                         on_open=lambda *args: print('Show banner ad'))
         data = {
             "Facebook": "facebook-box",
             "YouTube": "youtube",

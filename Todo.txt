@@ -21,6 +21,8 @@ Tabs (Tabs Below Toolbar)
 Tooltip (Hint Text For Buttons)
 TapTargetView (Circle that surrounds a (floating action) button)
 
+focus/hover behavior (doesn't do anything on mobile)
+
 Optionals (Probably not going to use often, so not necessary for demo app)
 
 Progress Loader (Loading Animation while Up/Downloading Files)
