@@ -287,7 +287,7 @@ class Snackbar(MDFloatLayout):
         self.size_hint_x = None
         self.width = Window.width - dp(self.padding) * 2
         Window.parent.add_widget(self)
-        anim = Animation(y=self.padding, d=0.2)
+        anim = Animation(y=self.padding + dp(50), d=0.2) # Added '+ dp(50)' to account for ad banner
         anim.bind(
             on_complete=lambda *args: Clock.schedule_interval(wait_interval, 0)
         )

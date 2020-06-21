@@ -1,0 +1,18 @@
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+#:import partial functools.partial
+
+<MDSnackbarScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDFloatLayout:
+            MDRaisedButton:
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                text: 'Show simple snackbar'
+                on_release:
+                    Snackbar(text='This is a snackbar', padding=dp(20), button_text='BUTTON', button_color=app.theme_cls.primary_color, button_callback=partial(app.toast, value='Snackbar!')).show()

@@ -18,6 +18,7 @@
 #:include kv/MDprogressbarscreen.kv
 #:include kv/MDsliderscreen.kv
 #:include kv/MDspinnerscreen.kv
+#:include kv/MDsnackbarscreen.kv
 #:include kv/starterscreen.kv
 
 NavigationLayout:
@@ -91,6 +92,10 @@ NavigationLayout:
         MDSpinnerScreen:
             name: 'MD_spinner_screen'
             id: MD_spinner_screen
+
+        MDSnackbarScreen:
+            name: 'MD_snackbar_screen'
+            id: MD_snackbar_screen
 
     MDNavigationDrawer:
         id: nav_drawer

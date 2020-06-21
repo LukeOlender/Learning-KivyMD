@@ -127,6 +127,14 @@
                     icon: 'volume-high'
 
             OneLineIconListItem:
+                text: 'MDSnackbar'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_snackbar_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'toaster-oven'
+
+            OneLineIconListItem:
                 text: 'MDSpinner'
                 on_release:
                     root.nav_drawer.set_state('close')

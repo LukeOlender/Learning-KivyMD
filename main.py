@@ -86,6 +86,10 @@ class MDSpinnerScreen(MDScreen):
     pass
 
 
+class MDSnackbarScreen(MDScreen):
+    pass
+
+
 class SwipeToDeleteItem(MDCardSwipe):
     """Card with `swipe-to-delete` behavior."""
 
