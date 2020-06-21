@@ -175,12 +175,13 @@ Builder.load_string(
 
     MDCard:
         id: box
-        size_hint_y: None
+        size_hint: 1, None
         height: dp(58)
         spacing: dp(5)
         padding: dp(10)
         y: -self.height
         x: root.padding
+        
         md_bg_color: get_color_from_hex('323232')
         radius: (5, 5, 5, 5) if root.padding else (0, 0, 0, 0)
         elevation: 11 if root.padding else 0
