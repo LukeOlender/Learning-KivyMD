@@ -175,8 +175,9 @@ Builder.load_string(
 
     MDCard:
         id: box
-        size_hint: 1, None
+        size_hint: None, None
         height: dp(58)
+        width: Window.width - root.padding * 2
         spacing: dp(5)
         padding: dp(10)
         y: -self.height
