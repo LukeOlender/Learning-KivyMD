@@ -78,7 +78,7 @@ class Toast(ModalView):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.size_hint = (None, None)
-        self.pos_hint = {"center_x": 0.5, "center_y": 0.1}
+        self.pos_hint = {"center_x": 0.5, "center_y": .15} # Personal edit to account for ad banner
         self.background_color = [0, 0, 0, 0]
         self.background = f"{images_path}transparent.png"
         self.opacity = 0
