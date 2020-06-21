@@ -15,13 +15,12 @@ C - Toasts
 C - Bottom Sheet (e.g. share on social media)
 C - Progress Bar (Loading Bar)
 C - Slider (Volume)
-SnackBar (Like a Toast but more for errors and stuff)
-Spinner (Loading Animation)
+C - SnackBar (Like a Toast but more for errors and stuff)
+C - Spinner (Loading Animation)
 Tabs (Tabs Below Toolbar)
 Tooltip (Hint Text For Buttons)
 TapTargetView (Circle that surrounds a (floating action) button)
-
-focus/hover behavior (doesn't do anything on mobile)
+RippleBehavior (To get a nice effect when you click an imagebutton)
 
 Optionals (Probably not going to use often, so not necessary for demo app)
 

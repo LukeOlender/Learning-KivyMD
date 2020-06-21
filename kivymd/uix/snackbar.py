@@ -175,9 +175,9 @@ Builder.load_string(
 
     MDCard:
         id: box
-        size_hint: None, None
+        size_hint: None, None # Set size_hint_x to None to, so I can set the width manually
         height: dp(58)
-        width: Window.width - root.padding * 2
+        width: Window.width - root.padding * 2 # Set the width to the right size, doesn't work on iphone otherwise
         spacing: dp(5)
         padding: dp(10)
         y: -self.height
