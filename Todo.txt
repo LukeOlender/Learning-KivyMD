@@ -1,23 +1,23 @@
 Useful Stuff
 
-C - Bottom Navigation (For switching screen like a lot of apps do)
-C - Buttons
-C - Cards
-C - CardSwipes
-C - Chips
-C - Dialogs
-C - ExpansionPanels
-C - Menus
-C - Pickers
-C - Switches
-C - TextFields
-C - Toasts
-C - Bottom Sheet (e.g. share on social media)
-C - Progress Bar (Loading Bar)
-C - Slider (Volume)
-C - SnackBar (Like a Toast but more for errors and stuff)
-C - Spinner (Loading Animation)
-Tabs (Tabs Below Toolbar)
+D - Bottom Navigation (For switching screen like a lot of apps do)
+D - Buttons
+D - Cards
+D - CardSwipes
+D - Chips
+D - Dialogs
+D - ExpansionPanels
+D - Menus
+D - Pickers
+D - Switches
+D - TextFields
+D - Toasts
+D - Bottom Sheet (e.g. share on social media)
+D - Progress Bar (Loading Bar)
+D - Slider (Volume)
+D - SnackBar (Like a Toast but more for errors and stuff)
+D - Spinner (Loading Animation)
+D - Tabs (Tabs Below Toolbar)
 Tooltip (Hint Text For Buttons)
 TapTargetView (Circle that surrounds a (floating action) button)
 RippleBehavior (To get a nice effect when you click an imagebutton)

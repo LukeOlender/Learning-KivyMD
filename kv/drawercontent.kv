@@ -174,9 +174,17 @@
                 IconLeftWidget:
                     icon: 'toaster-oven'
 
+            OneLineIconListItem:
+                text: 'MDTooltip'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_tooltip_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'tooltip'
+
 
     MDLabel:
-        text: u'\u00A9 Copyright of a Programmer'
+        text: u'\u00A9 2020 Luke Olender'
         font_style: 'Caption'
         halign: 'right'
         size_hint_y: None

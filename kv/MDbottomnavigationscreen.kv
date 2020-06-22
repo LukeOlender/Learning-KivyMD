@@ -8,34 +8,37 @@
             title: 'Navigation Drawer'
 
         MDBottomNavigation:
-            id: bottom_navigation
             # This is a fancy screenmanager
+            id: bottom_navigation
+
             MDBottomNavigationItem:
                 # This is a fancy screen
-                text: 'Python'
+                text: 'Home'
                 name: 'screen1'
-                icon: 'language-python'
+                icon: 'home'
                 MDRaisedButton:
                     pos_hint: {'center_x': .5, 'center_y': .5}
-                    text: 'Python!'
-                    md_bg_color: app.theme_cls.primary_color
-            MDBottomNavigationItem:
-                # This is a fancy screen
-                text: 'Earth'
-                name: 'screen2'
-                icon: 'earth'
-                MDRaisedButton:
-                    pos_hint: {'center_x': .5, 'center_y': .5}
-                    text: 'Earth'
+                    text: 'Home Screen'
                     md_bg_color: app.theme_cls.accent_color
+
             MDBottomNavigationItem:
                 # This is a fancy screen
-                text: 'Dog'
-                name: 'screen3'
-                icon: 'dog-service'
+                text: 'My Account'
+                name: 'screen2'
+                icon: 'account'
                 MDRaisedButton:
                     pos_hint: {'center_x': .5, 'center_y': .5}
-                    text: 'Dog!'
+                    text: 'Account Screen'
+                    md_bg_color: app.theme_cls.primary_color
+
+            MDBottomNavigationItem:
+                # This is a fancy screen
+                text: 'Settings'
+                name: 'screen3'
+                icon: 'settings'
+                MDRaisedButton:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    text: 'Settings Screen'
                     md_bg_color: (1, 0, 0, 1)
 
         Widget:

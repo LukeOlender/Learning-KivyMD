@@ -512,7 +512,8 @@ Builder.load_string(
         if not root.user_font_size \
         else (dp(root.user_font_size + 23), dp(root.user_font_size + 23))
     lbl_txt: lbl_txt
-    padding: dp(12) if root.icon in md_icons else 0
+    # padding: dp(12) if root.icon in md_icons else 0 --- Took this out because it seemed unnecessary and crashed
+                                                          #     the program when using with a tooltip
     theme_text_color: 'Primary'
 
     MDIcon:

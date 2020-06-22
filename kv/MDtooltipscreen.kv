@@ -1,0 +1,27 @@
+<TooltipMDIconButton@MDIconButton+MDTooltip>
+
+<MDTooltipScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDFloatLayout:
+            MDLabel:
+                text: 'Press and hold a button down'
+                pos_hint: {'center_x': .5, 'center_y': .7}
+                halign: 'center'
+
+            TooltipMDIconButton:
+                icon: 'content-copy'
+                pos_hint: {'center_x': .4, 'center_y': .5}
+                tooltip_text: 'Copy'
+
+            TooltipMDIconButton:
+                icon: 'content-paste'
+                pos_hint: {'center_x': .6, 'center_y': .5}
+                tooltip_text: 'Paste'

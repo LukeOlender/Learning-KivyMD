@@ -14,6 +14,8 @@ from kivy.clock import Clock
 from kivy.utils import platform
 from kivymd.uix.tab import MDTabsBase
 from kivymd.uix.floatlayout import MDFloatLayout
+from kivymd.uix.tooltip import MDTooltip
+from kivymd.uix.button import MDIconButton
 
 
 from custompy.customdialogs import CustomDialogs
@@ -93,6 +95,10 @@ class MDSnackbarScreen(MDScreen):
 
 
 class MDTabsScreen(MDScreen):
+    pass
+
+
+class MDTooltipScreen(MDScreen):
     pass
 
 

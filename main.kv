@@ -20,6 +20,7 @@
 #:include kv/MDspinnerscreen.kv
 #:include kv/MDsnackbarscreen.kv
 #:include kv/MDtabsscreen.kv
+#:include kv/MDtooltipscreen.kv
 #:include kv/starterscreen.kv
 
 NavigationLayout:
@@ -101,6 +102,10 @@ NavigationLayout:
         MDTabsScreen:
             name: 'MD_tabs_screen'
             id: MD_tabs_screen
+
+        MDTooltipScreen:
+            name: 'MD_tooltip_screen'
+            id: MD_tooltip_screen
 
     MDNavigationDrawer:
         id: nav_drawer
