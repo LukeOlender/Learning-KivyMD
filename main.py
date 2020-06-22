@@ -12,6 +12,8 @@ from kivymd.uix.expansionpanel import MDExpansionPanel, MDExpansionPanelThreeLin
 from kivymd.uix.bottomsheet import MDGridBottomSheet
 from kivy.clock import Clock
 from kivy.utils import platform
+from kivymd.uix.tab import MDTabsBase
+from kivymd.uix.floatlayout import MDFloatLayout
 
 
 from custompy.customdialogs import CustomDialogs
@@ -90,6 +92,16 @@ class MDSnackbarScreen(MDScreen):
     pass
 
 
+class MDTabsScreen(MDScreen):
+    pass
+
+
+class Tab(MDTabsBase, MDFloatLayout):
+    """Class implementing content for a tab"""
+    # Inheriting from MDTabsBase for the tab itself
+    # Inheriting from MDFloatLayout because that is the layout you will see when you click on a tab
+
+
 class SwipeToDeleteItem(MDCardSwipe):
     """Card with `swipe-to-delete` behavior."""
 
@@ -151,6 +163,11 @@ class MainDemoApp(MDApp):
                 )
             )
 
+        # Set up the tabs for tab screen
+        tabs = ['Home', 'Search', 'Friends', 'History', 'Account', 'Settings']
+        for tab in tabs:
+            self.root.ids.MD_tabs_screen.ids.tabs_holder.add_widget(Tab(text=tab))
+
         # Update the current toolbar
         current_screen = self.root.ids.screen_manager.current
         toolbar = self.root.ids[current_screen].ids.toolbar
@@ -161,6 +178,13 @@ class MainDemoApp(MDApp):
         if platform == 'ios':
             from pyobjus import autoclass
             self.banner_ad = autoclass('adSwitch').alloc().init()
+
+    def on_tab_switch(self, tabs_holder_instance, tab_instance, tab_label_instance, tab_text):
+        # tab_instance stands for not only the tab, but also what you see when you click the tab of course,
+        #     that is the inheritence of the floatlayout.
+
+        # Set the buttons text in the tab screen to the text of the tab itself
+        tab_instance.ids.button.text = tab_text
 
     def show_banner(self):
         # Show ads

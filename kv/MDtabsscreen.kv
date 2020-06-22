@@ -1,0 +1,22 @@
+<Tab>:
+
+    MDRaisedButton:
+        id: button
+        text: 'Home'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+<MDTabsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDTabs:
+            id: tabs_holder
+            tab_indicator_anim: True
+            on_tab_switch:
+                app.on_tab_switch(*args)

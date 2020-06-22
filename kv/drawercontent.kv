@@ -151,6 +151,14 @@
                     icon: 'toggle-switch'
 
             OneLineIconListItem:
+                text: 'MDTabs'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_tabs_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'tab'
+
+            OneLineIconListItem:
                 text: 'MDTextFields'
                 on_release:
                     root.nav_drawer.set_state('close')
