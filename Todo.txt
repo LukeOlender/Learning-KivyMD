@@ -18,7 +18,7 @@ D - Slider (Volume)
 D - SnackBar (Like a Toast but more for errors and stuff)
 D - Spinner (Loading Animation)
 D - Tabs (Tabs Below Toolbar)
-Tooltip (Hint Text For Buttons)
+D - Tooltip (Hint Text For Buttons)
 TapTargetView (Circle that surrounds a (floating action) button)
 RippleBehavior (To get a nice effect when you click an imagebutton)
 

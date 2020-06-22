@@ -102,7 +102,7 @@ class MDTooltipScreen(MDScreen):
     pass
 
 
-class Tab(MDTabsBase, MDFloatLayout):
+class CustomTab(MDTabsBase, MDFloatLayout):
     """Class implementing content for a tab"""
     # Inheriting from MDTabsBase for the tab itself
     # Inheriting from MDFloatLayout because that is the layout you will see when you click on a tab
@@ -143,7 +143,6 @@ class MainDemoApp(MDApp):
         self.root.ids.MD_bottom_navigation_screen.ids.bottom_navigation.on_resize()
 
     def on_start(self):
-        self.root.ids.nav_drawer.swipe_distance = 100
         self.custom_dialogs = CustomDialogs()
         self.custom_pickers = CustomPickers()
 
@@ -172,7 +171,7 @@ class MainDemoApp(MDApp):
         # Set up the tabs for tab screen
         tabs = ['Home', 'Search', 'Friends', 'History', 'Account', 'Settings']
         for tab in tabs:
-            self.root.ids.MD_tabs_screen.ids.tabs_holder.add_widget(Tab(text=tab))
+            self.root.ids.MD_tabs_screen.ids.tabs_holder.add_widget(CustomTab(text=tab))
 
         # Update the current toolbar
         current_screen = self.root.ids.screen_manager.current
