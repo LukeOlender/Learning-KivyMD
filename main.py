@@ -14,12 +14,10 @@ from kivy.clock import Clock
 from kivy.utils import platform
 from kivymd.uix.tab import MDTabsBase
 from kivymd.uix.floatlayout import MDFloatLayout
-from kivymd.uix.tooltip import MDTooltip
-from kivymd.uix.button import MDIconButton
-
 
 from custompy.customdialogs import CustomDialogs
 from custompy.custompickers import CustomPickers
+from custompy.customtaptargetviews import CustomTapTargetViews
 
 
 class StarterScreen(MDScreen):
@@ -102,6 +100,10 @@ class MDTooltipScreen(MDScreen):
     pass
 
 
+class MDTapTargetViewScreen(MDScreen):
+    pass
+
+
 class CustomTab(MDTabsBase, MDFloatLayout):
     """Class implementing content for a tab"""
     # Inheriting from MDTabsBase for the tab itself
@@ -145,6 +147,7 @@ class MainDemoApp(MDApp):
     def on_start(self):
         self.custom_dialogs = CustomDialogs()
         self.custom_pickers = CustomPickers()
+        self.custom_tap_target_views = CustomTapTargetViews(app=self)
 
         # Set up the menus for the menu screen
         menu_items = [{"icon": "git", "text": f"Item {i}"} for i in range(5)]

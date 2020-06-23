@@ -21,6 +21,7 @@
 #:include kv/MDsnackbarscreen.kv
 #:include kv/MDtabsscreen.kv
 #:include kv/MDtooltipscreen.kv
+#:include kv/MDtaptargetviewscreen.kv
 #:include kv/starterscreen.kv
 
 NavigationLayout:
@@ -106,6 +107,10 @@ NavigationLayout:
         MDTooltipScreen:
             name: 'MD_tooltip_screen'
             id: MD_tooltip_screen
+
+        MDTapTargetViewScreen:
+            name: 'MD_tap_target_view_screen'
+            id: MD_tap_target_view_screen
 
     MDNavigationDrawer:
         id: nav_drawer

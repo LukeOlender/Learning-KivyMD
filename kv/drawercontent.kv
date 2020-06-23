@@ -159,6 +159,14 @@
                     icon: 'tab'
 
             OneLineIconListItem:
+                text: 'MDTapTargetView'
+                on_release:
+                    root.nav_drawer.set_state('close')
+                    app.change_screen('MD_tap_target_view_screen', text=self.text)
+                IconLeftWidget:
+                    icon: 'google-circles'
+
+            OneLineIconListItem:
                 text: 'MDTextFields'
                 on_release:
                     root.nav_drawer.set_state('close')

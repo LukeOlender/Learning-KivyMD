@@ -1,0 +1,25 @@
+<MDTapTargetViewScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            id: toolbar
+            elevation: 10
+            title: 'Navigation Drawer'
+
+        MDFloatLayout:
+            id: container
+            MDFloatingActionButton:
+                id: button1
+                pos: ('20dp', '70dp')
+                icon: 'plus'
+                on_release: app.custom_tap_target_views.toggle_tap_1()
+
+            MDFloatingActionButton:
+                id: button2
+                pos: (root.width - dp(20) - self.width, container.height - self.height - dp(75))
+                icon: 'plus'
+                on_release: app.custom_tap_target_views.toggle_tap_2()
+
+
